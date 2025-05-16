@@ -3,123 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy | Secure Bitcoin Wallet</title>
+  <title>Privacy Policy - Secure Bitcoin Wallet</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #111;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    h2 {
-      margin-top: 30px;
-      color: #222;
-    }
-    p {
-      margin-bottom: 20px;
-    }
-    hr {
-      margin: 30px 0;
-      border: none;
-      border-top: 1px solid #ccc;
-    }
-    a {
-      color: #007bff;
+    body { font-family: sans-serif; margin: 0; background-color: #fff; }
+    header.hero { background-color: #0a1c2e; color: #fff; padding: 40px 20px; text-align: center; }
+    .container { padding: 20px; max-width: 800px; margin: auto; }
+    h1, h2 { color: #0a1c2e; }
+    hr { margin: 30px 0; }
+    nav { background: #000; color: #fff; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; position: relative; }
+    .logo-img { height: 32px; }
+    .nav-links { display: flex; gap: 15px; }
+    .nav-links a { color: white; text-decoration: none; font-weight: bold; }
+    .menu-icon { display: none; font-size: 28px; cursor: pointer; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; background: #111; position: absolute; top: 60px; right: 0; width: 100%; padding: 10px; }
+      .nav-links.show { display: flex; }
+      .menu-icon { display: block; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Privacy Policy</h1>
 
+  <nav>
+    <img src="images/logo.png" alt="Logo" class="logo-img" />
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="compliance.html">Compliance</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Privacy Policy</h1>
+    <p>Last Updated: May 16, 2025</p>
+  </header>
+
+  <div class="container">
     <p>Welcome to Secure Bitcoin Wallet (the “App”), operated by A BOUQUET OF BALLOONS (“we”, “us”, or “our”). We are committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our App. Please read this policy carefully to understand our practices.</p>
 
-    <hr>
+    <hr><h2>1. Our Commitment to Your Privacy</h2>
+    <p>We do not collect, store, or share any personal data. All data remains on your device and is never transmitted to us or third parties.</p>
 
-    <h2>1. Our Commitment to Your Privacy</h2>
-    <p>At A BOUQUET OF BALLOONS, your privacy and security are our top priority. We do not collect, store, or share any personal data through the Secure Bitcoin Wallet. All data related to your use of the App, including Bitcoin wallet information or transaction details, is securely stored on your device and is never transmitted to us or any third party.</p>
-
-    <hr>
-
-    <h2>2. Information We Do Not Collect</h2>
-    <p>We do not collect any personal information such as:</p>
+    <hr><h2>2. Information We Do Not Collect</h2>
     <ul>
-      <li>Your name, email address, or contact details.</li>
-      <li>Device identifiers (e.g., IP address, IMEI, or MAC address).</li>
-      <li>Location data.</li>
-      <li>Bitcoin wallet addresses, private keys, or transaction history.</li>
-    </ul>
-    <p>All data generated or used within the App remains exclusively on your device under your control.</p>
-
-    <hr>
-
-    <h2>3. How Is Your Data Stored?</h2>
-    <p>Any data generated or managed by the App (e.g., wallet keys and transaction logs) is stored locally on your device. We use industry-standard encryption and security practices within the App to ensure this data remains secure. You are responsible for protecting your device and any backups of your data.</p>
-
-    <hr>
-
-    <h2>4. No Data Sharing</h2>
-    <p>Since we do not collect any data, we do not share any information with third parties, including service providers, affiliates, or government entities, unless required by law (see Section 8).</p>
-
-    <hr>
-
-    <h2>5. Third-Party Services</h2>
-    <p>Secure Bitcoin Wallet does not integrate with any third-party services that collect data. The App operates independently, ensuring that your information remains on your device.</p>
-
-    <hr>
-
-    <h2>6. Children’s Privacy</h2>
-    <p>The App is intended for general use and is not specifically directed at children. We do not knowingly collect or solicit information from users of any age, as no data is collected. If you have concerns about a child’s use of the App, please contact us at <a href="mailto:support@btcstarwallet.com">support@btcstarwallet.com</a>.</p>
-
-    <hr>
-
-    <h2>7. Your Rights</h2>
-    <p>Since we do not collect or process personal data, traditional privacy rights (e.g., access, correction, or deletion under GDPR, CCPA, or PIPEDA) do not apply to our practices. However, you have full control over the data stored on your device and may delete it at any time by uninstalling the App or managing your device’s storage.</p>
-
-    <hr>
-
-    <h2>8. Legal Requests & Compliance</h2>
-    <p>We do not retain any user data to disclose. If we receive a legal request for user information (e.g., from a government authority), we will comply with applicable laws but will inform the requesting party that no data is collected or stored by us.</p>
-
-    <hr>
-
-    <h2>9. Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. The updated policy will be published within the App with a revised “Last Updated” date. We encourage you to review this policy periodically.</p>
-
-    <hr>
-
-    <h2>10. International Compliance</h2>
-    <p>This Privacy Policy is designed to comply with privacy laws in multiple jurisdictions, including:</p>
-    <ul>
-      <li>EU (GDPR): We do not process personal data, so GDPR obligations do not apply.</li>
-      <li>US (CCPA & state laws): We do not collect or sell personal information.</li>
-      <li>UK (UK GDPR): No personal data is processed.</li>
-      <li>Canada (PIPEDA): We do not collect personal information.</li>
-      <li>Pakistan: We comply with applicable local laws, including the Prevention of Electronic Crimes Act, by not collecting or mishandling user data.</li>
+      <li>Your name, email address, or contact details</li>
+      <li>Device identifiers (IP address, IMEI, or MAC address)</li>
+      <li>Location data</li>
+      <li>Wallet addresses, private keys, or transaction history</li>
     </ul>
 
-    <hr>
+    <hr><h2>3. How Is Your Data Stored?</h2>
+    <p>Data is stored locally with industry-standard encryption. You are responsible for your device security and backups.</p>
 
-    <h2>11. Contact Us</h2>
-    <p>If you have any questions or concerns about this Privacy Policy or our practices, please contact us:</p>
-    <p>Email: <a href="mailto:support@btcstarwallet.com">support@btcstarwallet.com</a></p>
-    <p>Operated by: A BOUQUET OF BALLOONS, Pakistan</p>
+    <hr><h2>4. No Data Sharing</h2>
+    <p>We do not share any data with third parties, including government or service providers.</p>
 
-    <hr>
+    <hr><h2>5. Third-Party Services</h2>
+    <p>The App runs independently and does not integrate with any third-party services.</p>
 
-    <h2>12. Governing Law</h2>
-    <p>This Privacy Policy is governed by the laws of Pakistan, regardless of conflict of law principles.</p>
+    <hr><h2>6. Children’s Privacy</h2>
+    <p>This App is not directed at children. No data is collected. Contact us if you have concerns.</p>
+
+    <hr><h2>7. Your Rights</h2>
+    <p>No data is processed, so traditional privacy rights do not apply. You control your data via your device.</p>
+
+    <hr><h2>8. Legal Requests & Compliance</h2>
+    <p>We do not retain data. If a legal request is made, we inform the requesting party that no user data exists.</p>
+
+    <hr><h2>9. Changes to This Privacy Policy</h2>
+    <p>We may update this policy. New versions will be posted with a revised date.</p>
+
+    <hr><h2>10. International Compliance</h2>
+    <p>We comply by not collecting data in regions like EU (GDPR), US (CCPA), UK, Canada, and Pakistan.</p>
+
+    <hr><h2>11. Contact Us</h2>
+    <p>Email: <a href="mailto:support@btcstarwallet.com">support@btcstarwallet.com</a><br>
+       Operated by: A BOUQUET OF BALLOONS, Pakistan</p>
+
+    <hr><h2>12. Governing Law</h2>
+    <p>This Privacy Policy is governed by the laws of Pakistan.</p>
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('show');
+    }
+  </script>
+
 </body>
 </html>
