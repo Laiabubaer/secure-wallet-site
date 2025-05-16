@@ -6,56 +6,69 @@
   <title>Secure Bitcoin Wallet</title>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .hamburger {
+    /* جزء CSS مدمج لتفعيل القائمة المنسدلة */
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #000;
+    }
+
+    .logo-img {
+      height: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu-toggle {
       display: none;
       font-size: 24px;
       background: none;
       border: none;
       color: white;
       cursor: pointer;
-      margin-left: auto;
     }
 
     @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-
       .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #111;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 10px;
-        border-radius: 6px;
-        z-index: 1000;
+        width: 100%;
+        background-color: #000;
+        text-align: left;
+        padding: 10px 0;
       }
 
-      .nav-links a {
-        color: white;
-        padding: 10px;
-        text-align: right;
-      }
-
-      .nav-links.show {
+      .nav-links.active {
         display: flex;
       }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 20px;
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="nav-container" style="display: flex; align-items: center; justify-content: space-between;">
+    <div class="nav-container">
       <img src="images/logo.png" alt="Logo" class="logo-img">
-      <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="nav-links" id="navLinks">
-        <a href="#">Home</a>
-        <a href="contact.html">Support</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
         <a href="compliance.html">Compliance</a>
       </div>
     </div>
@@ -102,7 +115,8 @@
 
   <script>
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
+      const links = document.getElementById("navLinks");
+      links.classList.toggle("active");
     }
   </script>
 </body>
