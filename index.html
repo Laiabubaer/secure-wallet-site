@@ -5,66 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Secure Bitcoin Wallet</title>
   <link rel="stylesheet" href="style.css"/>
-  <style>
-    /* جزء CSS مدمج لتفعيل القائمة المنسدلة */
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #000;
-    }
-
-    .logo-img {
-      height: 40px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #000;
-        text-align: left;
-        padding: 10px 0;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      padding: 8px 20px;
-    }
-  </style>
 </head>
 <body>
   <nav>
     <div class="nav-container">
       <img src="images/logo.png" alt="Logo" class="logo-img">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <div class="nav-links" id="navLinks">
+      <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
@@ -112,12 +58,5 @@
   <footer>
     <p>&copy; 2025 Secure Bitcoin Wallet | Built for freedom</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      const links = document.getElementById("navLinks");
-      links.classList.toggle("active");
-    }
-  </script>
 </body>
 </html>
