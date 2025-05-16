@@ -5,12 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Secure Bitcoin Wallet</title>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 6px;
+        z-index: 1000;
+      }
+
+      .nav-links a {
+        color: white;
+        padding: 10px;
+        text-align: right;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <div class="nav-container">
+    <div class="nav-container" style="display: flex; align-items: center; justify-content: space-between;">
       <img src="images/logo.png" alt="Logo" class="logo-img">
-      <div class="nav-links">
+      <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      <div class="nav-links" id="navLinks">
         <a href="#">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -59,5 +100,11 @@
   <footer>
     <p>&copy; 2025 Secure Bitcoin Wallet | Built for freedom</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
