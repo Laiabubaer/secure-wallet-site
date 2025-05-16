@@ -15,6 +15,7 @@
       background: #000;
       color: #fff;
       padding: 10px 20px;
+      position: relative;
     }
 
     .nav-container {
@@ -54,17 +55,24 @@
       .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-      }
-
-      .nav-links.active {
-        display: flex;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 180px;
+        padding: 10px;
+        border: 1px solid #333;
+        text-align: right;
       }
 
       .nav-links a {
         padding: 10px 0;
-        border-top: 1px solid #333;
+        border-bottom: 1px solid #222;
+        color: white;
+      }
+
+      .nav-links.active {
+        display: flex;
       }
     }
   </style>
