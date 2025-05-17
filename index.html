@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Secure Bitcoin Wallet</title>
+  <link rel="stylesheet" href="style.css"/>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f5f6fa;
-      color: #2f3640;
+      background-color: #fff;
     }
     .nav-container {
       display: flex;
@@ -17,11 +17,13 @@
       align-items: center;
       background-color: #000;
       padding: 10px 20px;
-      position: relative;
     }
     .logo-img {
       width: 40px;
       height: 40px;
+      background-color: #ffcc00;
+      border-radius: 6px;
+      padding: 4px;
     }
     .menu-toggle {
       display: none;
@@ -44,96 +46,53 @@
       font-size: 14px;
     }
     @media (max-width: 768px) {
-      .menu-toggle {
-        display: flex;
-      }
       .nav-links {
         display: none;
         flex-direction: column;
         background-color: #000;
+        width: 100%;
         position: absolute;
-        top: 55px;
-        right: 20px;
-        width: 180px;
-        padding: 10px;
-        border-radius: 6px;
-        z-index: 99;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        top: 60px;
+        right: 0;
+        text-align: right;
+        padding: 10px 20px;
       }
       .nav-links.show {
         display: flex;
       }
-      .nav-links a {
-        padding: 10px 0;
-        border-bottom: 1px solid #222;
+      .menu-toggle {
+        display: flex;
       }
-      .nav-links a:last-child {
-        border-bottom: none;
-      }
-    }
-    header.hero {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #fff;
-    }
-    header.hero h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-    header.hero p {
-      font-size: 16px;
-      color: #666;
-    }
-    .store-button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background-color: #2d98da;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 14px;
     }
     .section {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
+      text-align: center;
       padding: 40px 20px;
-      background-color: #ffffff;
-      border-bottom: 1px solid #dcdde1;
-    }
-    .section:nth-child(even) {
-      background-color: #f0f2f5;
     }
     .section img {
       width: 100%;
-      max-width: 320px;
-      margin: 20px;
+      max-width: 400px;
+      margin: 20px auto;
+      display: block;
       border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .text-block {
-      max-width: 500px;
-      margin: 20px;
-      text-align: center;
-    }
-    .text-block h2 {
+    .section h2 {
       font-size: 22px;
-      margin-bottom: 10px;
-      color: #2d3436;
+      color: #222;
+      margin-top: 10px;
     }
-    .text-block p {
+    .section p {
       font-size: 16px;
-      color: #636e72;
+      color: #555;
+      max-width: 700px;
+      margin: 10px auto;
       line-height: 1.6;
     }
     footer {
       text-align: center;
-      background: #dfe6e9;
+      background: #eee;
       padding: 20px;
       font-size: 14px;
-      color: #2d3436;
     }
   </style>
 </head>
@@ -156,7 +115,7 @@
     </div>
   </nav>
 
-  <header class="hero">
+  <header class="hero dark" style="text-align:center; padding: 40px;">
     <h1>Welcome to Secure Bitcoin Wallet</h1>
     <p>Your secure self-custodial Bitcoin & Lightning wallet</p>
     <a class="store-button" href="https://play.google.com/store/apps/details?id=ps.starwallet.bitcoin.android">
@@ -164,38 +123,30 @@
     </a>
   </header>
 
-  <section class="section">
-    <div class="text-block">
-      <h2>Empowering Your Bitcoin Journey</h2>
-      <p>At SatBox Wallet, we provide a secure self-custody Bitcoin wallet app designed to give you complete control over your digital assets, ensuring safety and ease of use.</p>
-    </div>
+  <section class="section light">
+    <h2>Empowering Your Bitcoin Journey</h2>
+    <p>At Secure Bitcoin Wallet, we provide a secure self-custody Bitcoin wallet app designed to give you complete control over your digital assets, ensuring safety and ease of use.</p>
     <img src="images/63ad251d-3a37-414c-b0cb-99f08c0f2c84.jpg" alt="Users">
   </section>
 
-  <section class="section">
-    <img src="images/9b168b34-c9cf-4fdd-ba99-c218f2940108.jpg" alt="Secure Wallet">
-    <div class="text-block">
-      <h2>Secure Bitcoin Wallet</h2>
-      <p>Experience self-custody with our intuitive Bitcoin wallet app designed for maximum security and control.</p>
-      <h2>User-Friendly Interface</h2>
-      <p>Navigate effortlessly with our wallet app, designed for both beginners and experienced users alike.</p>
-    </div>
+  <section class="section light">
+    <h2>Secure Bitcoin Wallet</h2>
+    <p>Experience self-custody with our intuitive Bitcoin wallet app designed for maximum security and control.</p>
+    <img src="images/9b168b34-c9cf-4fdd-ba99-c218f2940108.jpg" alt="Secure Bitcoin Wallet">
+    <h2>User-Friendly Interface</h2>
+    <p>Navigate effortlessly with our wallet app, designed for both beginners and experienced users alike.</p>
   </section>
 
-  <section class="section">
-    <div class="text-block">
-      <h2>Enhanced Security Features</h2>
-      <p>Protect your assets with advanced encryption and multi-layer security protocols for peace of mind.</p>
-    </div>
+  <section class="section light">
     <img src="images/72797269-60b2-4d1c-8e99-e7a8781033fe.jpg" alt="Security Features">
+    <h2>Enhanced Security Features</h2>
+    <p>Protect your assets with advanced encryption and multi-layer security protocols for peace of mind.</p>
   </section>
 
-  <section class="section">
+  <section class="section light">
     <img src="images/a5ec3ba0-e59d-4e2d-8e62-70c65daa4e2c.jpg" alt="Transaction Access">
-    <div class="text-block">
-      <h2>Instant Transaction Access</h2>
-      <p>Manage your Bitcoin transactions seamlessly with our wallet app, ensuring quick and easy access anytime.</p>
-    </div>
+    <h2>Instant Transaction Access</h2>
+    <p>Manage your Bitcoin transactions seamlessly with our wallet app, ensuring quick and easy access anytime.</p>
   </section>
 
   <footer>
@@ -204,7 +155,8 @@
 
   <script>
     function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('show');
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('show');
     }
   </script>
 </body>
