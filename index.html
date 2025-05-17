@@ -50,10 +50,7 @@
     }
 
     @media (max-width: 768px) {
-      .menu-toggle {
-        display: flex;
-      }
-
+      .menu-toggle { display: flex; }
       .nav-links {
         display: none;
         flex-direction: column;
@@ -66,21 +63,13 @@
         border-radius: 6px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         text-align: right;
-        z-index: 99;
       }
-
-      .nav-links.show {
-        display: flex;
-      }
-
+      .nav-links.show { display: flex; }
       .nav-links a {
         padding: 10px 0;
         border-bottom: 1px solid #222;
       }
-
-      .nav-links a:last-child {
-        border-bottom: none;
-      }
+      .nav-links a:last-child { border-bottom: none; }
     }
 
     .section {
@@ -128,18 +117,58 @@
       margin-bottom: 25px;
     }
 
-    .support-section {
+    .support-section-pro {
+      background-color: #f0f6ff;
+      padding: 50px 20px;
       text-align: center;
-      padding: 30px 20px;
-      background-color: #f9f9f9;
-      font-size: 15px;
-      color: #333;
+      border-top: 1px solid #dbeafe;
+      animation: fadeInUp 1s ease-out;
     }
 
-    .support-section a {
+    .support-section-pro h2 {
+      color: #0a1f44;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .support-section-pro p {
+      color: #444;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .support-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .support-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      color: #0a1f44;
+    }
+
+    .support-item img {
+      height: 24px;
+    }
+
+    .support-item a {
       color: #0a1f44;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    .support-item a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     footer {
@@ -155,9 +184,7 @@
     <div class="nav-container">
       <img src="images/logo.png" alt="Logo" class="logo-img">
       <div class="menu-toggle" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div></div><div></div><div></div>
       </div>
       <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
@@ -210,16 +237,21 @@
     </a>
   </section>
 
-  <section class="support-section">
-    <h3>Support</h3>
-    <p>
-      <img src="images/icons8-email-48.png" alt="Email Icon" style="height: 20px; vertical-align: middle; margin-right: 6px;">
-      <a href="mailto:support@btcstarwallet.com">support@btcstarwallet.com</a>
-    </p>
-    <p>
-      <img src="images/icons8-phone-24.png" alt="Phone Icon" style="height: 18px; vertical-align: middle; margin-right: 6px;">
-      +1 512 369 8743
-    </p>
+  <section class="support-section-pro">
+    <div class="support-container">
+      <h2>Need help or have a question?</h2>
+      <p>Our support team is ready to assist you. Reach out to us anytime via email or phone.</p>
+      <div class="support-items">
+        <div class="support-item">
+          <img src="images/icons8-email-48.png" alt="Email Icon">
+          <a href="mailto:support@btcstarwallet.com">support@btcstarwallet.com</a>
+        </div>
+        <div class="support-item">
+          <img src="images/icons8-phone-24.png" alt="Phone Icon">
+          <span>+1 512 369 8743</span>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
