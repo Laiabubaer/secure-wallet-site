@@ -5,25 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Secure Bitcoin Wallet</title>
   <style>
-    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #fff;
-      line-height: 1.6;
     }
 
-    h2 { color: #0a1f44; }
-    p { color: #444; font-size: 16px; }
-
-    nav.nav-container {
+    .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #000;
       padding: 10px 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 999;
+      position: relative;
     }
 
     .logo-img {
@@ -56,7 +50,10 @@
     }
 
     @media (max-width: 768px) {
-      .menu-toggle { display: flex; }
+      .menu-toggle {
+        display: flex;
+      }
+
       .nav-links {
         display: none;
         flex-direction: column;
@@ -69,62 +66,66 @@
         border-radius: 6px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         text-align: right;
+        z-index: 99;
       }
-      .nav-links.show { display: flex; }
+
+      .nav-links.show {
+        display: flex;
+      }
+
       .nav-links a {
         padding: 10px 0;
         border-bottom: 1px solid #222;
       }
-      .nav-links a:last-child { border-bottom: none; }
+
+      .nav-links a:last-child {
+        border-bottom: none;
+      }
     }
 
-    .hero, .cta-section {
+    .section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .section img {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .section h2 {
+      font-size: 22px;
+      color: #222;
+      margin-top: 10px;
+    }
+
+    .section p {
+      font-size: 16px;
+      color: #555;
+      max-width: 700px;
+      margin: 10px auto;
+      line-height: 1.6;
+    }
+
+    .google-play-badge {
+      height: 60px;
+      margin-top: 20px;
+    }
+
+    .cta-section {
       background-color: #0a1f44;
       color: white;
       text-align: center;
       padding: 60px 20px;
     }
 
-    .hero h1, .cta-section h2 {
+    .cta-section h2 {
       font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 16px;
-      max-width: 600px;
-      margin: 0 auto 20px;
-    }
-
-    .google-play-badge {
-      height: 60px;
-      margin-top: 10px;
-      transition: transform 0.3s;
-    }
-
-    .google-play-badge:hover {
-      transform: scale(1.05);
-    }
-
-    section.features {
-      padding: 60px 20px;
-      border-bottom: 1px solid #eee;
-    }
-
-    section.features:nth-child(even) {
-      background: #f9f9f9;
-    }
-
-    .features h2 {
-      font-size: 24px;
-      margin-bottom: 16px;
-    }
-
-    .features p {
-      max-width: 700px;
-      margin: 0 auto 20px;
-      line-height: 1.6;
-      font-size: 16px;
+      margin-bottom: 25px;
     }
 
     .support-section {
@@ -143,60 +144,63 @@
 
     footer {
       text-align: center;
-      background: #0a1f44;
-      color: #fff;
+      background: #eee;
       padding: 20px;
       font-size: 14px;
     }
   </style>
 </head>
 <body>
-
-  <nav class="nav-container">
-    <img src="images/logo.png" alt="Logo" class="logo-img">
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <div></div><div></div><div></div>
-    </div>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="contact.html">Contact</a>
-      <a href="compliance.html">Compliance</a>
+  <nav>
+    <div class="nav-container">
+      <img src="images/logo.png" alt="Logo" class="logo-img">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+        <a href="compliance.html">Compliance</a>
+      </div>
     </div>
   </nav>
 
-  <section class="hero">
-    <h1>Secure Bitcoin Wallet</h1>
-    <p>A self-custodial Bitcoin & Lightning wallet designed for fast, low-fee payments. Your keys, your coins.</p>
+  <header class="hero dark" style="text-align:center; padding: 40px; background-color: #0a1f44; color: white;">
+    <h1>Welcome to Secure Bitcoin Wallet</h1>
+    <p>Your secure self-custodial Bitcoin & Lightning wallet</p>
     <a href="https://play.google.com/store/apps/details?id=ps.starwallet.bitcoin.android" target="_blank">
       <img class="google-play-badge" src="images/en_badge_web_generic.png" alt="Get it on Google Play">
     </a>
+  </header>
+
+  <section class="section light">
+    <h2>Empowering Your Bitcoin Journey</h2>
+    <p>At Secure Bitcoin Wallet, we provide a secure self-custody Bitcoin wallet app designed to give you complete control over your digital assets, ensuring safety and ease of use.</p>
+    <img src="images/63ad251d-3a37-414c-b0cb-99f08c0f2c84.jpg" alt="Users">
   </section>
 
-  <section class="features">
-    <h2><img src="images/lock.png" style="vertical-align:middle;margin-right:10px;">Take Full Control of Your Bitcoin</h2>
-    <p>Secure Bitcoin Wallet gives you total ownership of your assets. No middlemen, no custodians — just you and your bitcoin.</p>
+  <section class="section light">
+    <h2>Secure Bitcoin Wallet</h2>
+    <p>Experience self-custody with our intuitive Bitcoin wallet app designed for maximum security and control.</p>
+    <img src="images/9b168b34-c9cf-4fdd-ba99-c218f2940108.jpg" alt="Secure Bitcoin Wallet">
+    <h2>User-Friendly Interface</h2>
+    <p>Navigate effortlessly with our wallet app, designed for both beginners and experienced users alike.</p>
   </section>
 
-  <section class="features">
-    <h2><img src="images/flash-on.png" style="vertical-align:middle;margin-right:10px;">Lightning Fast Payments</h2>
-    <p>Send and receive payments instantly with fees as low as 1 satoshi — perfect for daily use or global transfers.</p>
+  <section class="section light">
+    <img src="images/72797269-60b2-4d1c-8e99-e7a8781033fe.jpg" alt="Security Features">
+    <h2>Enhanced Security Features</h2>
+    <p>Protect your assets with advanced encryption and multi-layer security protocols for peace of mind.</p>
   </section>
 
-  <section class="features">
-    <h2><img src="images/wallet-app.png" style="vertical-align:middle;margin-right:10px;">Self-Custody. Made Simple.</h2>
-    <p>Beginner-friendly interface with strong security. No account needed — just install and you're ready.</p>
-  </section>
-
-  <section class="features">
-    <h2><img src="images/invisible.png" style="vertical-align:middle;margin-right:10px;">Privacy by Design</h2>
-    <p>We don’t track you. All data stays on your device. Your financial privacy matters.</p>
-  </section>
-
-  <section class="features">
-    <h2><img src="images/settings.png" style="vertical-align:middle;margin-right:10px;">Advanced Features for Power Users</h2>
-    <p>Connect your own node, manage multiple wallets, and use full Lightning capabilities — it's all here.</p>
+  <section class="section light">
+    <img src="images/a5ec3ba0-e59d-4e2d-8e62-70c65daa4e2c.jpg" alt="Transaction Access">
+    <h2>Instant Transaction Access</h2>
+    <p>Manage your Bitcoin transactions seamlessly with our wallet app, ensuring quick and easy access anytime.</p>
   </section>
 
   <section class="cta-section">
@@ -219,7 +223,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Secure Bitcoin Wallet | Built for freedom
+    <p>&copy; 2025 Secure Bitcoin Wallet | Built for freedom</p>
   </footer>
 
   <script>
