@@ -11,6 +11,7 @@
       font-family: Arial, sans-serif;
       background-color: #fff;
     }
+
     .nav-container {
       display: flex;
       justify-content: space-between;
@@ -19,34 +20,41 @@
       padding: 10px 20px;
       position: relative;
     }
+
     .logo-img {
       width: 40px;
       height: 40px;
     }
+
     .menu-toggle {
       display: none;
       flex-direction: column;
       cursor: pointer;
     }
+
     .menu-toggle div {
       width: 25px;
       height: 3px;
       background-color: white;
       margin: 4px 0;
     }
+
     .nav-links {
       display: flex;
       gap: 15px;
     }
+
     .nav-links a {
       color: white;
       text-decoration: none;
       font-size: 14px;
     }
+
     @media (max-width: 768px) {
       .menu-toggle {
         display: flex;
       }
+
       .nav-links {
         display: none;
         flex-direction: column;
@@ -61,21 +69,26 @@
         text-align: right;
         z-index: 99;
       }
+
       .nav-links.show {
         display: flex;
       }
+
       .nav-links a {
         padding: 10px 0;
         border-bottom: 1px solid #222;
       }
+
       .nav-links a:last-child {
         border-bottom: none;
       }
     }
+
     .section {
       text-align: center;
       padding: 40px 20px;
     }
+
     .section img {
       width: 100%;
       max-width: 400px;
@@ -84,11 +97,13 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+
     .section h2 {
       font-size: 22px;
       color: #222;
       margin-top: 10px;
     }
+
     .section p {
       font-size: 16px;
       color: #555;
@@ -96,6 +111,12 @@
       margin: 10px auto;
       line-height: 1.6;
     }
+
+    .google-play-badge {
+      height: 60px;
+      margin-top: 20px;
+    }
+
     footer {
       text-align: center;
       background: #eee;
@@ -123,11 +144,11 @@
     </div>
   </nav>
 
-  <header class="hero dark" style="text-align:center; padding: 40px;">
+  <header class="hero dark" style="text-align:center; padding: 40px; background-color: #0a1f44; color: white;">
     <h1>Welcome to Secure Bitcoin Wallet</h1>
     <p>Your secure self-custodial Bitcoin & Lightning wallet</p>
-    <a class="store-button" href="https://play.google.com/store/apps/details?id=ps.starwallet.bitcoin.android">
-      Download on Google Play
+    <a href="https://play.google.com/store/apps/details?id=ps.starwallet.bitcoin.android" target="_blank">
+      <img class="google-play-badge" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Get_it_on_Google_play.svg" alt="Get it on Google Play">
     </a>
   </header>
 
