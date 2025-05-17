@@ -1,53 +1,212 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Terms and Conditions</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Terms and Conditions – Secure Bitcoin Wallet</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    nav {
+      background: #000;
+      color: #fff;
+      padding: 10px 20px;
+      position: relative;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-img {
+      height: 40px;
+      background: #ffcc00;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #000;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        width: 180px;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .nav-links a {
+        padding: 8px 0;
+        border-bottom: 1px solid #222;
+      }
+    }
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .content h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .content h2 {
+      font-size: 22px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .content ul {
+      margin: 10px 0 20px 20px;
+    }
+    .content ul li {
+      margin-bottom: 8px;
+    }
+    footer {
+      text-align: center;
+      background: #eee;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
+
   <nav>
     <div class="nav-container">
       <img src="images/logo.png" alt="Logo" class="logo-img">
-      <div class="nav-links">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
         <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
         <a href="compliance.html">Compliance</a>
       </div>
     </div>
   </nav>
 
-  <header class="hero dark">
-    <h1>Terms and Conditions</h1>
-    <p>Effective Date: May 16, 2025</p>
-  </header>
+  <main class="content">
+    <h1>Terms &amp; Conditions</h1>
+    <p><strong>Effective Date:</strong> March 11, 2025</p>
+    <p><strong>Last Updated:</strong> March 11, 2025</p>
 
-  <section class="section light">
+    <p>Welcome to Secure Bitcoin Wallet (the “App”), operated by A BOUQUET OF BALLOONS (“we”, “us” or “our”). By downloading, installing, or using the App, you (“you” or “User”) agree to be bound by these Terms &amp; Conditions (“Terms”). If you do not agree, please do not use the App.</p>
+
     <h2>1. Acceptance of Terms</h2>
-    <p>By using the Secure Bitcoin Wallet app, you agree to these terms. If you do not agree, do not use the app.</p>
+    <p>These Terms govern your use of the Secure Bitcoin Wallet mobile application. We may update these Terms from time to time; the latest version will be posted within the App. Continued use after changes constitutes acceptance.</p>
 
-    <h2>2. No Custody</h2>
-    <p>This wallet is self-custodial. You are fully responsible for managing your keys and funds.</p>
+    <h2>2. App Description</h2>
+    <p>Secure Bitcoin Wallet is a non-custodial wallet app that lets you create, store, and manage your Bitcoin addresses and private keys locally on your device. We do not hold or control your Bitcoin or related data.</p>
 
-    <h2>3. No Data Collection</h2>
-    <p>We do not collect or store any user data. Your data stays on your device.</p>
+    <h2>3. Eligibility</h2>
+    <p>The App is available to individuals of all ages and jurisdictions, provided your use complies with local laws. By using the App, you represent that your use does not violate any laws in your jurisdiction.</p>
 
-    <h2>4. Limitation of Liability</h2>
-    <p>We are not liable for any loss of funds, keys, or device access.</p>
+    <h2>4. User Responsibilities</h2>
+    <ul>
+      <li><strong>Device Security:</strong> Protect your device, private keys, and backups. We are not responsible for losses due to lost, stolen, or compromised devices or keys.</li>
+      <li><strong>Legal Use:</strong> Use the App only for lawful purposes and comply with all applicable laws and regulations, including those regarding cryptocurrencies.</li>
+      <li><strong>No Reverse Engineering:</strong> Do not decompile, reverse engineer, or modify the App, except as permitted by law.</li>
+      <li><strong>Risk Acknowledgement:</strong> Understand and accept the risks of cryptocurrency, including price volatility, hacking, and loss of access.</li>
+    </ul>
 
-    <h2>5. Legal Compliance</h2>
-    <p>You are responsible for complying with your local laws regarding bitcoin use.</p>
+    <h2>5. Our Responsibilities &amp; Limitations</h2>
+    <ul>
+      <li><strong>Non-Custodial Nature:</strong> We do not control or hold your private keys or funds and cannot recover lost keys or funds on your behalf.</li>
+      <li><strong>No Warranties:</strong> The App is provided “as is” and “as available” without warranties of any kind, express or implied, including merchantability or fitness for a particular purpose.</li>
+      <li><strong>No Third-Party Dependencies:</strong> The App operates independently of third-party data collectors. Any blockchain network is outside our control.</li>
+    </ul>
 
-    <h2>6. Contact</h2>
-    <p>If you have any questions, email us at: support@btcstarwallet.com</p>
-  </section>
+    <h2>6. Intellectual Property</h2>
+    <p>The App and its content (design, code, trademarks) are owned by A BOUQUET OF BALLOONS and protected by copyright, trademark, and other IP laws. You are granted a limited, non-exclusive, non-transferable license to use the App for personal, non-commercial purposes.</p>
+
+    <h2>7. Prohibited Activities</h2>
+    <ul>
+      <li>Using the App for illegal activities (e.g., money laundering, fraud).</li>
+      <li>Distributing malware or attempting to harm the App or other users.</li>
+      <li>Copying, distributing, or selling the App without written permission.</li>
+      <li>Violating the rights of others or these Terms.</li>
+    </ul>
+
+    <h2>8. Termination</h2>
+    <p>We may terminate or suspend your access to the App at our discretion, without notice, if we believe you have violated these Terms. You may stop using the App at any time by uninstalling it.</p>
+
+    <h2>9. Limitation of Liability</h2>
+    <ul>
+      <li>To the maximum extent permitted by law, we are not liable for any direct, indirect, incidental, or consequential damages arising from your use of the App, including loss of funds, data, or access.</li>
+    </ul>
+
+    <h2>10. Indemnification</h2>
+    <p>You agree to indemnify and hold harmless A BOUQUET OF BALLOONS from any claims, losses, liabilities, and expenses (including attorneys’ fees) arising from your use of the App or violation of these Terms.</p>
+
+    <h2>11. Governing Law &amp; Dispute Resolution</h2>
+    <p>These Terms are governed by the laws of the United States. Disputes will first be resolved by good-faith negotiation, and if unresolved, by the exclusive jurisdiction of courts in the United States.</p>
+
+    <h2>12. No Financial Advice</h2>
+    <p>The App is a tool for managing Bitcoin and does not provide financial, investment, or legal advice. You are responsible for your own decisions and should consult professionals as needed.</p>
+
+    <h2>13. Force Majeure</h2>
+    <p>We are not liable for delays or failures to perform caused by events beyond our control, including natural disasters, government actions, or blockchain network issues.</p>
+
+    <h2>14. Contact Us</h2>
+    <p>For questions about these Terms, please contact us at <a href="mailto:support@btcstarwallet.com">support@btcstarwallet.com</a>.</p>
+
+    <h2>15. Entire Agreement</h2>
+    <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and A BOUQUET OF BALLOONS regarding your use of Secure Bitcoin Wallet.</p>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Secure Bitcoin Wallet | All rights reserved</p>
+    &copy; 2025 Secure Bitcoin Wallet | Built for freedom
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('show');
+    }
+  </script>
+
 </body>
 </html>
+```
