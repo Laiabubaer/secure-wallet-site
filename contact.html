@@ -8,103 +8,140 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #1d1e2c;
+      background-color: #121624;
       color: #fff;
     }
+
     .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #000;
       padding: 10px 20px;
+      position: relative;
     }
+
     .logo-img {
       width: 40px;
       height: 40px;
     }
+
     .menu-toggle {
       display: none;
       flex-direction: column;
       cursor: pointer;
     }
+
     .menu-toggle div {
       width: 25px;
       height: 3px;
       background-color: white;
       margin: 4px 0;
     }
+
     .nav-links {
       display: flex;
       gap: 15px;
     }
+
     .nav-links a {
       color: white;
       text-decoration: none;
       font-size: 14px;
     }
+
     @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
       .nav-links {
         display: none;
         flex-direction: column;
         background-color: #000;
-        width: 100%;
         position: absolute;
-        top: 60px;
-        right: 0;
+        top: 55px;
+        right: 20px;
+        width: 180px;
+        padding: 10px;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         text-align: right;
-        padding: 10px 20px;
+        z-index: 99;
       }
+
       .nav-links.show {
         display: flex;
       }
-      .menu-toggle {
-        display: flex;
+
+      .nav-links a {
+        padding: 10px 0;
+        border-bottom: 1px solid #222;
+      }
+
+      .nav-links a:last-child {
+        border-bottom: none;
       }
     }
 
-    .contact-container {
-      max-width: 500px;
-      margin: 60px auto;
-      padding: 20px;
+    .container {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 35px 25px;
+      background-color: #1c1f2e;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    h2 {
       text-align: center;
-    }
-    h1 {
-      font-size: 28px;
       margin-bottom: 10px;
+      font-size: 26px;
     }
+
     p {
+      text-align: center;
+      font-size: 14px;
       color: #ccc;
-      font-size: 15px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
+
     input, textarea {
       width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
+      padding: 8px 12px;
+      margin: 8px 0;
       border: none;
-      border-radius: 4px;
-      font-size: 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      background-color: #fff;
+      color: #000;
     }
+
     textarea {
-      height: 120px;
-      resize: none;
+      resize: vertical;
+      min-height: 90px;
     }
+
     button {
       width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      background-color: #ff9933;
+      padding: 10px;
+      background-color: #ff9900;
       border: none;
-      border-radius: 4px;
       color: white;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 6px;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
+
     button:hover {
-      background-color: #e0882b;
+      background-color: #e08700;
     }
   </style>
 </head>
 <body>
+
   <nav>
     <div class="nav-container">
       <img src="images/logo.png" alt="Logo" class="logo-img">
@@ -123,12 +160,14 @@
     </div>
   </nav>
 
-  <div class="contact-container">
-    <h1>Contact Us</h1>
-    <p>For inquiries about Secure Bitcoin Wallet, our simple and powerful Bitcoin wallet, please reach out to us.</p>
-    <form action="mailto:support@btcstarwallet.com" method="POST" enctype="text/plain">
-      <input type="text" name="Full Name" placeholder="Full Name*" required />
-      <input type="email" name="Email" placeholder="Email*" required />
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>For inquiries about Secure Bitcoin Wallet, our simple and secure Bitcoin app, please reach out to us.</p>
+    <form action="https://formsubmit.co/support@btcstarwallet.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="thank-you.html">
+      <input type="text" name="Full Name" placeholder="Full Name*" required>
+      <input type="email" name="Email" placeholder="Email*" required>
       <textarea name="Message" placeholder="Message*" required></textarea>
       <button type="submit">Send</button>
     </form>
@@ -140,5 +179,6 @@
       navLinks.classList.toggle('show');
     }
   </script>
+
 </body>
 </html>
