@@ -1,123 +1,143 @@
+تفضل، هذا هو **كود صفحة سياسة الخصوصية** باللغة الإنجليزية، مع:
+
+* شعار بدون خلفية صفراء
+* قائمة أيقونة (ثلاث شحطات) متجاوبة مع الجوال
+* نص منسق بشكل احترافي
+
+---
+
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy - Secure Bitcoin Wallet</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Privacy Policy – Secure Bitcoin Wallet</title>
   <style>
     body {
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #111;
-      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
     }
-
-    header.hero {
-      background-color: #fff;
-      color: #000;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    .container {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 20px;
-      margin-top: 30px;
-      color: #000;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
     nav {
       background: #000;
       color: #fff;
       padding: 10px 20px;
+      position: relative;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
     }
-
     .logo-img {
-      height: 32px;
+      height: 40px;
     }
-
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
+    }
     .nav-links {
       display: flex;
       gap: 15px;
     }
-
     .nav-links a {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 14px;
     }
-
-    .menu-icon {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-    }
-
     @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
       .nav-links {
         display: none;
-        flex-direction: column;
-        background: #111;
         position: absolute;
         top: 60px;
-        right: 0;
-        width: 100%;
+        right: 20px;
+        background: #000;
+        flex-direction: column;
         padding: 10px;
+        border-radius: 5px;
+        width: 180px;
       }
       .nav-links.show {
         display: flex;
       }
-      .menu-icon {
-        display: block;
+      .nav-links a {
+        padding: 8px 0;
+        border-bottom: 1px solid #222;
       }
+    }
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .content h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .content h2 {
+      font-size: 22px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .content ul {
+      margin: 10px 0 20px 20px;
+    }
+    .content ul li {
+      margin-bottom: 8px;
+    }
+    footer {
+      text-align: center;
+      background: #eee;
+      padding: 20px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <img src="images/logo.png" alt="Logo" class="logo-img" />
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="privacy.html">Privacy policy</a>
-      <a href="terms.html">Terms of Service </a>
-      <a href="contact.html">support</a>
-      <a href="compliance.html">Compliance</a>
+    <div class="nav-container">
+      <img src="images/logo.png" alt="Logo" class="logo-img">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="contact.html">Contact</a>
+        <a href="compliance.html">Compliance</a>
+      </div>
     </div>
   </nav>
 
-  <header class="hero">
+  <main class="content">
     <h1>Privacy Policy</h1>
-    <p><strong>Last Updated:</strong> May 16, 2025</p>
-  </header>
+    <p>Welcome to Secure Bitcoin Wallet (“the App”), operated by A BOUQUET OF BALLOONS (“we”, “us”, or “our”). We are committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our App. Please read this policy carefully to understand our practices.</p>
 
-  <div class="container">
-    <p>Welcome to Secure Bitcoin Wallet (the “App”), operated by A BOUQUET OF BALLOONS (“we”, “us”, or “our”). We are committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our App. Please read this policy carefully to understand our practices.</p>
-
-    <h2>1. Our Commitment to Your Privacy</h2>
-    <p>We do not collect, store, or share any personal data. All data remains on your device and is never transmitted to us or third parties.</p>
+    <h2>1. Our Commitment to Privacy</h2>
+    <p>We do not collect, store, or share any personal data. All data remains on your device and is never transmitted to us or any third party.</p>
 
     <h2>2. Information We Do Not Collect</h2>
     <ul>
@@ -128,36 +148,40 @@
     </ul>
 
     <h2>3. How Is Your Data Stored?</h2>
-    <p>Data is stored locally with encryption. You are responsible for your device security and backups.</p>
+    <p>Data is stored locally on your device using encryption. You are responsible for securing your device and any backups.</p>
 
     <h2>4. No Data Sharing</h2>
     <p>We do not share any data with third parties or authorities.</p>
 
     <h2>5. Third-Party Services</h2>
-    <p>The app does not use any third-party services or data collectors.</p>
+    <p>The App does not use any third-party services or data collectors.</p>
 
     <h2>6. Children’s Privacy</h2>
-    <p>This app is not directed at children. No data is collected. Contact us with any concerns.</p>
+    <p>The App is not directed at children. No data is collected. Contact us if you have concerns.</p>
 
     <h2>7. Your Rights</h2>
-    <p>No data is processed. You can delete all your data by removing the app from your device.</p>
+    <p>We do not process data. You may delete all data by removing the App from your device.</p>
 
     <h2>8. Legal Requests & Compliance</h2>
-    <p>We do not retain user data. If requested legally, we state we have no data.</p>
+    <p>We do not retain user data. If legally requested, we will confirm that we hold no data.</p>
 
     <h2>9. Changes to This Privacy Policy</h2>
-    <p>We may update this policy. Updates will appear here with a new date.</p>
+    <p>We may update this policy from time to time. Updates will be shown here with a new date.</p>
 
     <h2>10. International Compliance</h2>
-    <p>This policy is compliant with major global privacy laws by avoiding data collection entirely.</p>
+    <p>This policy complies with major global privacy laws by avoiding any data collection.</p>
 
     <h2>11. Contact Us</h2>
-    <p>Email: <a href="mailto:support@btcstarwallet.com">support@btcstarwallet.com</a><br>
-       Operated by: A BOUQUET OF BALLOONS, Pakistan</p>
+    <p>Email: support@btcstarwallet.com<br>
+    Operated by: A BOUQUET OF BALLOONS, USA</p>
 
     <h2>12. Governing Law</h2>
-    <p>This policy is governed by the laws of Pakistan.</p>
-  </div>
+    <p>This policy is governed by the laws of the United States.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 Secure Bitcoin Wallet | Built for freedom
+  </footer>
 
   <script>
     function toggleMenu() {
@@ -167,3 +191,6 @@
 
 </body>
 </html>
+```
+
+هل ترغب أن أجهز لك الملف بصيغة `.html` أيضًا للتحميل؟
