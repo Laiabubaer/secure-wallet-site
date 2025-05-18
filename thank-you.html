@@ -1,47 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thank You</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank You - Secure Bitcoin Wallet</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f5f6fa;
+      background-color: #121624;
+      color: #fff;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       height: 100vh;
       text-align: center;
     }
-    .message-box {
-      background-color: #ffffff;
-      padding: 40px 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+    .container {
       max-width: 500px;
+      padding: 30px;
+      background-color: #1c1f2e;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
+
     h1 {
-      color: #2c3e50;
-      margin-bottom: 20px;
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #ff9900;
     }
+
     p {
-      color: #34495e;
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 25px;
     }
-    strong {
-      color: #e67e22;
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #ff9900;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #e08700;
     }
   </style>
 </head>
 <body>
-  <div class="message-box">
-    <h1>Thank You for Reaching Out!</h1>
-    <p>Your message has been received. We appreciate your interest in Secure Bitcoin Wallet.</p>
-    <p>Our team will review your message and get back to you as soon as possible. If your inquiry is urgent, feel free to contact us directly at <strong>support@btcstarwallet.com</strong>.</p>
-    <p>Have a great day!</p>
+
+  <div class="container">
+    <h1>Thank You!</h1>
+    <p>Your message has been successfully sent. We’ll get back to you as soon as possible.</p>
+    <a href="index.html">Return to Home</a>
   </div>
+
 </body>
 </html>
