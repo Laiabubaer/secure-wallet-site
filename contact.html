@@ -107,9 +107,9 @@
     }
 
     input, textarea {
-      width: 100%;
-      padding: 8px 12px;
-      margin: 8px 0;
+      width: 94%;
+      padding: 6px 10px;
+      margin: 6px 0;
       border: none;
       border-radius: 6px;
       font-size: 13px;
@@ -119,16 +119,16 @@
 
     textarea {
       resize: vertical;
-      min-height: 90px;
+      min-height: 80px;
     }
 
     button {
       width: 100%;
-      padding: 10px;
+      padding: 9px;
       background-color: #ff9900;
       border: none;
       color: white;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: bold;
       border-radius: 6px;
       cursor: pointer;
@@ -136,6 +136,42 @@
     }
 
     button:hover {
+      background-color: #e08700;
+    }
+
+    .contact-info {
+      font-size: 13px;
+      color: #ccc;
+      margin-top: 30px;
+    }
+
+    .contact-info img {
+      width: 16px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    .contact-info p {
+      margin: 6px 0;
+    }
+
+    .back-home {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .back-home a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff9900;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .back-home a:hover {
       background-color: #e08700;
     }
   </style>
@@ -162,14 +198,33 @@
 
   <div class="container">
     <h2>Contact Us</h2>
-    <p>For inquiries about Secure Bitcoin Wallet, our simple and secure Bitcoin app, please reach out to us.</p>
-    <<form action="https://formsubmit.co/support@btcstarwallet.com" method="POST">
-  <input type="hidden" name="_next" value="https://laiabubaer.github.io/secure-wallet-site/thank-you.html">
-  <input type="text" name="name" placeholder="Full Name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <textarea name="message" placeholder="Message" required></textarea>
-  <button type="submit">Send</button>
+    <p>For inquiries about Secure Bitcoin Wallet, our secure and self-custodial Bitcoin app, please use the form below or reach out directly.</p>
+
+    <form action="https://formsubmit.co/support@btcstarwallet.com" method="POST">
+      <input type="hidden" name="_next" value="thank-you.html">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
     </form>
+
+    <div class="contact-info">
+      <p><strong>Business Address:</strong><br>
+      Secure Bitcoin Wallet<br>
+      1209 Mountain Road Pl NE #5438<br>
+      Albuquerque, NM 87110, USA</p>
+
+      <p>
+        <img src="images/icons8-email-48.png" alt="Email Icon"> support@securebitcoinwallet.com
+      </p>
+      <p>
+        <img src="images/icons8-phone-24.png" alt="Phone Icon"> +1 (555) 123-4567
+      </p>
+    </div>
+
+    <div class="back-home">
+      <a href="index.html">Return to Home</a>
+    </div>
   </div>
 
   <script>
