@@ -15,7 +15,6 @@
       background: #000;
       color: #fff;
       padding: 10px 20px;
-      position: relative;
     }
     .nav-container {
       max-width: 1200px;
@@ -59,7 +58,6 @@
         background: #000;
         flex-direction: column;
         padding: 10px;
-        border: 1px solid #333;
         border-radius: 5px;
         width: 180px;
       }
@@ -71,35 +69,36 @@
         border-bottom: 1px solid #222;
       }
     }
-    .content {
+    main.content {
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
+      text-align: left;
     }
-    .content h1 {
+    main.content h1 {
       font-size: 28px;
       margin-bottom: 10px;
+      color: #0a1f44;
     }
-    .content p {
+    main.content p, main.content li {
       font-size: 16px;
       line-height: 1.6;
       margin-bottom: 15px;
     }
-    .content h2 {
+    main.content h2 {
       font-size: 22px;
       margin-top: 30px;
       margin-bottom: 10px;
+      color: #0a1f44;
     }
-    .content ul {
-      margin: 10px 0 20px 20px;
-    }
-    .content ul li {
-      margin-bottom: 8px;
+    main.content ul {
+      margin-left: 20px;
     }
     footer {
+      background: #0a1f44;
+      color: #eee;
       text-align: center;
-      background: #eee;
-      padding: 20px;
+      padding: 30px 20px;
       font-size: 14px;
     }
   </style>
@@ -110,13 +109,11 @@
     <div class="nav-container">
       <img src="images/logo.png" alt="Logo" class="logo-img">
       <div class="menu-toggle" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div></div><div></div><div></div>
       </div>
       <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy </a>
+        <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
         <a href="contact.html">Contact</a>
         <a href="compliance.html">Compliance</a>
