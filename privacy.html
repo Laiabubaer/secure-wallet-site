@@ -15,7 +15,6 @@
       background: #000;
       color: #fff;
       padding: 10px 20px;
-      position: relative;
     }
     .nav-container {
       max-width: 1200px;
@@ -70,26 +69,29 @@
         border-bottom: 1px solid #222;
       }
     }
-    .content {
+    main.content {
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
+      text-align: left;
     }
-    .content h1 {
+    main.content h1 {
       font-size: 28px;
       margin-bottom: 10px;
+      color: #0a1f44;
     }
-    .content p, .content li {
+    main.content p, main.content li {
       font-size: 16px;
       line-height: 1.6;
       margin-bottom: 15px;
     }
-    .content h2 {
+    main.content h2 {
       font-size: 22px;
       margin-top: 30px;
       margin-bottom: 10px;
+      color: #0a1f44;
     }
-    .content ul {
+    main.content ul {
       margin-left: 20px;
     }
     footer {
@@ -111,9 +113,7 @@
     <div class="nav-container">
       <img src="images/logo.png" alt="Logo" class="logo-img">
       <div class="menu-toggle" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div></div><div></div><div></div>
       </div>
       <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
