@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ps.starwallet.bitcoin.android",
+      "sha256_cert_fingerprints": [
+        "96:36:34:B5:81:28:A8:38:12:17:0F:36:9F:37:38:5E:4B:25:BD:1F:95:97:71:44:2D:BE:67:0F:ED:C9:7C:17"
+      ]
+    }
+  }
+]
