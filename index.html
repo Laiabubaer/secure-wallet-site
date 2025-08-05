@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bitcoin Wallet – BitNodl</title>
-  <meta name="description" content="BitNodl is a secure and lightning-fast self-custodial Bitcoin wallet.">
-  <meta name="keywords" content="Bitcoin Wallet, BitNodl, Crypto Wallet, Lightning, Secure Wallet, Self Custody">
-  <meta name="author" content="BitNodl Team">
+  <title>Bitcoin Wallet – BitNodl | Secure & Lightning Fast</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Bitcoin Wallet: BitNodl is the best self-custodial Bitcoin wallet, supporting Lightning payments with full control, privacy, and speed.">
+  <meta name="keywords" content="Bitcoin Wallet, Lightning Wallet, BitNodl, Crypto Wallet, Self Custody, Multisig Wallet">
+  <meta name="author" content="Bitcoin Wallet: BitNodl Team">
+  <meta name="language" content="en">
+  <meta name="geo.region" content="US">
+  <link rel="canonical" href="https://btcsecurewallet.com">
+  <meta name="google-site-verification" content="IXURcUAJWMQx9J_lcVP5SID1t7fJ4IbUBGOTqTXIcUQ" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <!-- AOS Animation CSS -->
@@ -18,31 +24,39 @@
     header, section, footer {padding: 60px 20px; text-align: center;}
     nav {display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05);}
     .logo {font-size: 24px; font-weight: bold; color: #2563eb;}
-    .nav-links a {margin: 0 15px; color: #0f172a; font-weight: 500;}
-    .hero h1 {font-size: 36px; margin-bottom: 20px;}
-    .hero p {font-size: 18px; max-width: 600px; margin: auto;}
+    .menu-toggle {display: none; flex-direction: column; cursor: pointer;}
+    .menu-toggle div {width: 25px; height: 3px; background: #000; margin: 4px 0;}
+    .nav-links {display: flex; gap: 20px;}
+    .nav-links a {color: #0f172a; font-weight: 500;}
     .btn-primary {
       display: inline-block; margin-top: 20px; padding: 15px 30px;
       background: #2563eb; color: #fff; font-size: 16px; border-radius: 8px;
       transition: background 0.3s;
     }
     .btn-primary:hover {background: #1d4ed8;}
-    .btn-appstore { background: #111; color: #fff; }
-    .features {display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;}
-    .feature {
+    .btn-appstore {background: #111;}
+    .features, .support-items {display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;}
+    .feature, .support-item {
       background: #fff; border-radius: 10px; padding: 30px;
       width: 260px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);
       transition: transform 0.3s ease;
     }
     .feature:hover {transform: translateY(-5px);}
-    .feature h3 {margin-bottom: 10px; color: #2563eb;}
-    .security, .cta {background-color: #e0f2fe;}
+    .feature h3 {color: #2563eb;}
+    .support-item img {height: 24px;}
     img.screenshot {
       max-width: 350px; border-radius: 16px;
       margin-top: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
+    .security, .cta, .lightning, .multisig, .support-section {background-color: #e0f2fe;}
     footer {background-color: #f1f5f9; font-size: 14px;}
     .footer-links a {margin: 0 10px; color: #475569;}
+    .disclaimer {color: #777; max-width: 800px; margin: 40px auto; line-height: 1.6;}
+    @media (max-width: 768px) {
+      .nav-links {display: none; flex-direction: column; background: #fff; position: absolute; top: 60px; right: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); padding: 20px; border-radius: 8px;}
+      .nav-links.show {display: flex;}
+      .menu-toggle {display: flex;}
+    }
   </style>
 </head>
 <body>
@@ -50,7 +64,10 @@
   <!-- Navigation -->
   <nav>
     <div class="logo">BitNodl</div>
-    <div class="nav-links">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
       <a href="#">Home</a>
       <a href="#features">Features</a>
       <a href="#security">Security</a>
@@ -59,88 +76,96 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <header class="hero" data-aos="fade-up">
     <h1>Take Control of Your Bitcoin</h1>
-    <p>BitNodl is a lightning-fast, self-custodial wallet built for privacy, security, and simplicity. Own your keys, own your future.</p>
+    <p>BitNodl is a lightning-fast, self-custodial wallet built for privacy, security, and simplicity.</p>
     <div style="margin-top:30px;">
-      <a class="btn-primary" href="https://play.google.com/store/apps/details?id=ps.starwallet.bitcoin.android" target="_blank">
-        Download on Google Play
-      </a>
-      <a class="btn-primary btn-appstore" href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" style="margin-left:15px;">
-        Download on App Store
-      </a>
+      <a class="btn-primary" href="https://play.google.com/store/apps/details?id=ps.starwallet.bitcoin.android" target="_blank">Download on Google Play</a>
+      <a class="btn-primary btn-appstore" href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" style="margin-left:15px;">Download on App Store</a>
     </div>
   </header>
 
-  <!-- Features Section -->
+  <!-- Features -->
   <section id="features">
     <h2 data-aos="fade-up">Wallet Features</h2>
     <div class="features">
-      <div class="feature" data-aos="zoom-in">
-        <h3>Self-Custody</h3>
-        <p>You are the only one who controls your private keys and funds.</p>
-      </div>
-      <div class="feature" data-aos="zoom-in">
-        <h3>Lightning Fast</h3>
-        <p>Send and receive Bitcoin instantly using the Lightning Network.</p>
-      </div>
-      <div class="feature" data-aos="zoom-in">
-        <h3>Secure & Encrypted</h3>
-        <p>Advanced encryption and multisig support to keep your assets safe.</p>
-      </div>
-      <div class="feature" data-aos="zoom-in">
-        <h3>Simple Interface</h3>
-        <p>Designed to be user-friendly for beginners and advanced users alike.</p>
-      </div>
+      <div class="feature" data-aos="zoom-in"><h3>Self-Custody</h3><p>You control your private keys and assets.</p></div>
+      <div class="feature" data-aos="zoom-in"><h3>Lightning Fast</h3><p>Use the Lightning Network for instant transactions.</p></div>
+      <div class="feature" data-aos="zoom-in"><h3>Multisig Security</h3><p>2-of-2 multisig protects your funds even if you lose your phone.</p></div>
+      <div class="feature" data-aos="zoom-in"><h3>Simple Interface</h3><p>Clean, intuitive design for all users.</p></div>
     </div>
   </section>
 
-  <!-- Security Section -->
-  <section class="security" id="security">
-    <h2 data-aos="fade-up">Security You Can Trust</h2>
-    <p data-aos="fade-up">BitNodl implements strong encryption, PIN protection, and multi-signature support. Even if your phone is lost, your bitcoin remains protected.</p>
-    <img class="screenshot" src="images/secure-phone.png" alt="Security Image" data-aos="zoom-in">
+  <!-- Lightning Network -->
+  <section class="lightning" data-aos="fade-up">
+    <h2>Lightning Network</h2>
+    <p>The Lightning Network enables instant, low-fee Bitcoin transactions. BitNodl integrates it seamlessly to give you speed and power.</p>
   </section>
 
-  <!-- Screenshot Section -->
+  <!-- Multisig -->
+  <section class="multisig" data-aos="fade-up">
+    <h2>Multisig Security</h2>
+    <p>BitNodl uses multi-signature wallets to protect your bitcoin. Even if your device is lost, your assets remain safe and accessible.</p>
+  </section>
+
+  <!-- Screenshot -->
   <section>
-    <h2 data-aos="fade-up">Built for Bitcoiners</h2>
-    <p data-aos="fade-up">Simple design. Powerful features. Everything you need in a Bitcoin wallet.</p>
-    <img class="screenshot" src="images/app-preview.png" alt="App Preview" data-aos="zoom-in">
+    <h2 data-aos="fade-up">App Preview</h2>
+    <img class="screenshot" src="images/app-preview.png" alt="App Screenshot" data-aos="zoom-in">
   </section>
 
   <!-- Call to Action -->
   <section class="cta" id="download">
     <h2 data-aos="fade-up">Start Using BitNodl Today</h2>
-    <p data-aos="fade-up">Your secure Bitcoin journey begins now.</p>
+    <p>Your secure Bitcoin journey starts now.</p>
     <div style="margin-top:30px;" data-aos="zoom-in">
-      <a class="btn-primary" href="https://play.google.com/store/apps/details?id=ps.starwallet.bitcoin.android" target="_blank">
-        Download on Google Play
-      </a>
-      <a class="btn-primary btn-appstore" href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" style="margin-left:15px;">
-        Download on App Store
-      </a>
+      <a class="btn-primary" href="https://play.google.com/store/apps/details?id=ps.starwallet.bitcoin.android" target="_blank">Download on Google Play</a>
+      <a class="btn-primary btn-appstore" href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" style="margin-left:15px;">Download on App Store</a>
     </div>
   </section>
+
+  <!-- Support Section -->
+  <section class="support-section" id="contact">
+    <h2 data-aos="fade-up">Need Help?</h2>
+    <p data-aos="fade-up">Reach out to our support team via email or phone.</p>
+    <div class="support-items">
+      <div class="support-item" data-aos="zoom-in">
+        <img src="images/icons8-email-48.png" alt="Email Icon">
+        <a href="mailto:support@btcstarwallet.com">support@btcstarwallet.com</a>
+      </div>
+      <div class="support-item" data-aos="zoom-in">
+        <img src="images/icons8-phone-24.png" alt="Phone Icon">
+        <span>+1 512 369 8743</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer" data-aos="fade-up">
+    <p>
+      Bitcoin Wallet: BitNodl is a self-custodial application. We do not offer custodial services, financial advice, or investment products. Users retain full control of their private keys and assets. Our MSB registration with FinCEN is for compliance purposes only and does not imply government approval or financial licensing.
+    </p>
+  </div>
 
   <!-- Footer -->
   <footer>
     <div class="footer-links">
       <a href="privacy.html">Privacy Policy</a> |
       <a href="terms.html">Terms of Service</a> |
+      <a href="compliance.html">Legal Compliance</a> |
       <a href="contact.html">Contact Us</a>
     </div>
     <p style="margin-top:10px;">&copy; 2025 BitNodl. All rights reserved.</p>
   </footer>
 
-  <!-- AOS Animation Script -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    AOS.init({ duration: 1000, once: true });
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('show');
+    }
   </script>
 </body>
 </html>
