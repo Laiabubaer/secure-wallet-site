@@ -8,6 +8,10 @@
   <meta name="keywords" content="Bitcoin Wallet, BitNodl, Crypto Wallet, Lightning, Secure Wallet, Self Custody">
   <meta name="author" content="BitNodl Team">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
   <style>
     body {margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f8fafc; color: #0f172a;}
     a {text-decoration: none; color: inherit;}
@@ -23,14 +27,20 @@
       transition: background 0.3s;
     }
     .btn-primary:hover {background: #1d4ed8;}
-    .btn-appstore {
-      background: #111; color: #fff;
-    }
+    .btn-appstore { background: #111; color: #fff; }
     .features {display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;}
-    .feature {background: #fff; border-radius: 10px; padding: 30px; width: 260px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);}
+    .feature {
+      background: #fff; border-radius: 10px; padding: 30px;
+      width: 260px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+    }
+    .feature:hover {transform: translateY(-5px);}
     .feature h3 {margin-bottom: 10px; color: #2563eb;}
     .security, .cta {background-color: #e0f2fe;}
-    img.screenshot {max-width: 300px; border-radius: 12px; margin-top: 30px;}
+    img.screenshot {
+      max-width: 350px; border-radius: 16px;
+      margin-top: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
     footer {background-color: #f1f5f9; font-size: 14px;}
     .footer-links a {margin: 0 10px; color: #475569;}
   </style>
@@ -50,7 +60,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero">
+  <header class="hero" data-aos="fade-up">
     <h1>Take Control of Your Bitcoin</h1>
     <p>BitNodl is a lightning-fast, self-custodial wallet built for privacy, security, and simplicity. Own your keys, own your future.</p>
     <div style="margin-top:30px;">
@@ -65,21 +75,21 @@
 
   <!-- Features Section -->
   <section id="features">
-    <h2>Wallet Features</h2>
+    <h2 data-aos="fade-up">Wallet Features</h2>
     <div class="features">
-      <div class="feature">
+      <div class="feature" data-aos="zoom-in">
         <h3>Self-Custody</h3>
         <p>You are the only one who controls your private keys and funds.</p>
       </div>
-      <div class="feature">
+      <div class="feature" data-aos="zoom-in">
         <h3>Lightning Fast</h3>
         <p>Send and receive Bitcoin instantly using the Lightning Network.</p>
       </div>
-      <div class="feature">
+      <div class="feature" data-aos="zoom-in">
         <h3>Secure & Encrypted</h3>
         <p>Advanced encryption and multisig support to keep your assets safe.</p>
       </div>
-      <div class="feature">
+      <div class="feature" data-aos="zoom-in">
         <h3>Simple Interface</h3>
         <p>Designed to be user-friendly for beginners and advanced users alike.</p>
       </div>
@@ -88,23 +98,23 @@
 
   <!-- Security Section -->
   <section class="security" id="security">
-    <h2>Security You Can Trust</h2>
-    <p>BitNodl implements strong encryption, PIN protection, and multi-signature support. Even if your phone is lost, your bitcoin remains protected.</p>
-    <img class="screenshot" src="images/secure-phone.png" alt="Security Image">
+    <h2 data-aos="fade-up">Security You Can Trust</h2>
+    <p data-aos="fade-up">BitNodl implements strong encryption, PIN protection, and multi-signature support. Even if your phone is lost, your bitcoin remains protected.</p>
+    <img class="screenshot" src="images/secure-phone.png" alt="Security Image" data-aos="zoom-in">
   </section>
 
   <!-- Screenshot Section -->
   <section>
-    <h2>Built for Bitcoiners</h2>
-    <p>Simple design. Powerful features. Everything you need in a Bitcoin wallet.</p>
-    <img class="screenshot" src="images/app-preview.png" alt="App Preview">
+    <h2 data-aos="fade-up">Built for Bitcoiners</h2>
+    <p data-aos="fade-up">Simple design. Powerful features. Everything you need in a Bitcoin wallet.</p>
+    <img class="screenshot" src="images/app-preview.png" alt="App Preview" data-aos="zoom-in">
   </section>
 
   <!-- Call to Action -->
   <section class="cta" id="download">
-    <h2>Start Using BitNodl Today</h2>
-    <p>Your secure Bitcoin journey begins now.</p>
-    <div style="margin-top:30px;">
+    <h2 data-aos="fade-up">Start Using BitNodl Today</h2>
+    <p data-aos="fade-up">Your secure Bitcoin journey begins now.</p>
+    <div style="margin-top:30px;" data-aos="zoom-in">
       <a class="btn-primary" href="https://play.google.com/store/apps/details?id=ps.starwallet.bitcoin.android" target="_blank">
         Download on Google Play
       </a>
@@ -124,5 +134,13 @@
     <p style="margin-top:10px;">&copy; 2025 BitNodl. All rights reserved.</p>
   </footer>
 
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
